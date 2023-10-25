@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet2 : MonoBehaviour
+public class Laser : MonoBehaviour
 {
     public GameObject bonus;
-    public Transform bulletTransform;
     public Rigidbody2D monRigidBody;
     public float speed;
     private int chance;
-    public float bulletHP = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +17,7 @@ public class Bullet2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Ennemies2 bullet = collision.gameObject.GetComponent<Ennemies2>();
-        bulletHP -= 1; 
-        bulletTransform.localScale *= 0.75f; 
 
-        if (bulletHP == 0)
-        {
-            Destroy(gameObject);
-        }
         if (collision.gameObject.tag == "enemy")
         {
             chance = Random.Range(0, 4);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6863447708074395207}
   - component: {fileID: 3588231135627767681}
   - component: {fileID: 4819524458355231120}
-  - component: {fileID: 5144115588052714144}
+  - component: {fileID: -7970768298044538830}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -165,7 +165,7 @@ MonoBehaviour:
   bonus: {fileID: 3275866427394455614, guid: 5ea80bb5bfa82ff46851a842b960c25e, type: 3}
   monRigidBody: {fileID: 6863447708074395207}
   speed: 12
---- !u!96 &5144115588052714144
+--- !u!96 &-7970768298044538830
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,8 +207,8 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.03
-  m_PreviewTimeScale: 0
+  m_Time: 0.1
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -216,8 +216,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0017271158
-        value: 0.09629623
+        time: 0
+        value: 0.12956047
         inSlope: 0
         outSlope: 0
         tangentMode: 0

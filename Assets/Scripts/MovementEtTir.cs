@@ -6,6 +6,7 @@ public class MovementEtTir : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bullet2;
+    public GameObject laser;
 
     public Transform parent;
     public Transform limitL;
@@ -72,6 +73,11 @@ public class MovementEtTir : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.Space) && myShootMods == shootMods.shootMod2)
+        {
+            Instantiate(bullet2, new Vector2(parent.position.x, parent.position.y + 0.5f), parent.rotation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && myShootMods == shootMods.shootMod3)
         {
             Instantiate(bullet2, new Vector2(parent.position.x, parent.position.y + 0.5f), parent.rotation);
         }
