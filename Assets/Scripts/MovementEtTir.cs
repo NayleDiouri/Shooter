@@ -79,7 +79,8 @@ public class MovementEtTir : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && myShootMods == shootMods.shootMod3)
         {
-            Instantiate(bullet2, new Vector2(parent.position.x, parent.position.y + 0.5f), parent.rotation);
+            Instantiate(laser, new Vector2(parent.position.x, parent.position.y + 6f), parent.rotation);
+            Invoke("destroyLaser", 0.2f);
         }
 
         if (transform.position.x < limitL.position.x)
@@ -91,4 +92,9 @@ public class MovementEtTir : MonoBehaviour
             transform.position = new Vector3(limitL.position.x, transform.position.y, transform.position.z);
         }
     }
+    public void destroyLaser()
+    {
+        Destroy(laser);
+    }
+
 }

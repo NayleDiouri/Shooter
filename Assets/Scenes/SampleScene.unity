@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6470470209835675063, guid: a56b1226008b30644bcf65814b9bb2e6, type: 3}
   bullet2: {fileID: 6561062068489036388, guid: 1cc9ca85974d9ba4c92b073b5b4abc40, type: 3}
-  laser: {fileID: 0}
+  laser: {fileID: 2917372886897537218, guid: 848e68bb4d39214498e7b1df96d42ef9, type: 3}
   parent: {fileID: 234670887}
   limitL: {fileID: 1923840854}
   limitR: {fileID: 1899504735}

@@ -5,19 +5,21 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public GameObject bonus;
-    public Rigidbody2D monRigidBody;
-    public float speed;
     private int chance;
     // Start is called before the first frame update
     void Start()
     {
-        monRigidBody.velocity = Vector3.up * speed;
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Ennemies2 bullet = collision.gameObject.GetComponent<Ennemies2>();
+        print("coucou");
+        
 
+
+
+        Ennemies2 bullet = collision.gameObject.GetComponent<Ennemies2>();
         if (collision.gameObject.tag == "enemy")
         {
             chance = Random.Range(0, 4);
