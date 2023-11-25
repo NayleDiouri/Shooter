@@ -6,14 +6,14 @@ public class Bullet2 : MonoBehaviour
 {
     public GameObject bonus;
     public Transform bulletTransform;
-    public Rigidbody2D monRigidBody;
+    public Rigidbody2D myRigidBody;
     public float speed;
     private int chance;
     public float bulletHP = 5;
     // Start is called before the first frame update
     void Start()
     {
-        monRigidBody.velocity = Vector3.up * speed;
+        myRigidBody.velocity = Vector3.up * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,7 +28,7 @@ public class Bullet2 : MonoBehaviour
         }
         if (collision.gameObject.tag == "enemy")
         {
-            chance = Random.Range(0, 4);
+            chance = Random.Range(0, 10);
             Destroy(collision.gameObject);
             if (chance == 2)
             {

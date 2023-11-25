@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4819524458355231120}
   - component: {fileID: -7970768298044538830}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonus: {fileID: 3275866427394455614, guid: 5ea80bb5bfa82ff46851a842b960c25e, type: 3}
-  monRigidBody: {fileID: 6863447708074395207}
+  myRigidBody: {fileID: 6863447708074395207}
   speed: 12
 --- !u!96 &-7970768298044538830
 TrailRenderer:

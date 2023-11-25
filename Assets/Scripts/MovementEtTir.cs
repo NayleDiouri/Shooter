@@ -13,8 +13,18 @@ public class MovementEtTir : MonoBehaviour
     public Transform limitR;
     public bool bonusShoot;
 
+
     public float speed = 0.2f;
     public shootMods myShootMods;
+
+    public GameObject enemy;
+    public GameObject enemy2;
+
+    public Vector3 spawnPosition;
+    public float spawnTime1 = 1f;
+    public float spawnTime2 = 2f;
+
+
 
 
     public enum shootMods
@@ -27,6 +37,9 @@ public class MovementEtTir : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("Spawn", spawnTime1, spawnTime1);
+        InvokeRepeating("Spawn2", 20, spawnTime2);
+
 
     }
     // Update is called once per frame
@@ -75,12 +88,12 @@ public class MovementEtTir : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && myShootMods == shootMods.shootMod2)
         {
             Instantiate(bullet2, new Vector2(parent.position.x, parent.position.y + 0.5f), parent.rotation);
+
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && myShootMods == shootMods.shootMod3)
         {
             Instantiate(laser, new Vector2(parent.position.x, parent.position.y + 6f), parent.rotation);
-            Invoke("destroyLaser", 0.2f);
         }
 
         if (transform.position.x < limitL.position.x)
@@ -92,9 +105,20 @@ public class MovementEtTir : MonoBehaviour
             transform.position = new Vector3(limitL.position.x, transform.position.y, transform.position.z);
         }
     }
-    public void destroyLaser()
+    void Spawn()
     {
-        Destroy(laser);
-    }
+        spawnPosition.x = Random.Range(-8, 8);
+        spawnPosition.y = 6;
 
+        Instantiate(enemy, spawnPosition, Quaternion.identity);
+    }
+    void Spawn2()
+    {
+        spawnPosition.x = Random.Range(-8, 8);
+        spawnPosition.y = 6;
+
+        Instantiate(enemy2, spawnPosition, Quaternion.identity);
+    }
 }
+
+

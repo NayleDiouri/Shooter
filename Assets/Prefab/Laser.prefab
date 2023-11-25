@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7256643071017328152}
   - component: {fileID: -7856185610666824975}
   - component: {fileID: -572036164694772981}
+  - component: {fileID: 772253012719539868}
   - component: {fileID: -4690839901432183221}
   m_Layer: 0
   m_Name: Laser
@@ -135,6 +136,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonus: {fileID: 3275866427394455614, guid: 5ea80bb5bfa82ff46851a842b960c25e, type: 3}
+--- !u!114 &772253012719539868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917372886897537218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71188c8eea1fecf42a444795f79993a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0.2
 --- !u!50 &-4690839901432183221
 Rigidbody2D:
   serializedVersion: 4

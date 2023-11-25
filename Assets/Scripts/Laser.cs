@@ -14,7 +14,6 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("coucou");
         
 
 
@@ -22,7 +21,7 @@ public class Laser : MonoBehaviour
         Ennemies2 bullet = collision.gameObject.GetComponent<Ennemies2>();
         if (collision.gameObject.tag == "enemy")
         {
-            chance = Random.Range(0, 4);
+            chance = Random.Range(0, 10);
             Destroy(collision.gameObject);
             if (chance == 2)
             {

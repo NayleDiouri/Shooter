@@ -5,13 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject bonus;
-    public Rigidbody2D monRigidBody;
+    public Rigidbody2D myRigidBody;
     public float speed;
     private int chance;
     // Start is called before the first frame update
     void Start()
     {
-        monRigidBody.velocity = Vector3.up * speed;
+        myRigidBody.velocity = Vector3.up * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.tag == "enemy")
         {
-            chance = Random.Range(0, 4);
+            chance = Random.Range(0, 10);
             Destroy(collision.gameObject);
             Destroy(gameObject);
             if (chance == 2)
